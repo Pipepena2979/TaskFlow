@@ -1,0 +1,130 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+//** NUEVO METODO PARA INCLUIR EL DARKMODE CON MEDIAQUERIES */
+@media (prefers-color-scheme: dark) {
+    $grisOscuro: #2c2c3b;
+    body {
+        background-color: $grisOscuro;
+    }
+
+    .tagline,
+    .formulario label,
+    .login .acciones a,
+    .crear .acciones a,
+    .olvide .acciones a,
+    .reestablecer .acciones a {
+        color: v.$blanco;
+    }
+
+    .descripcion-pagina,
+    .formulario .campo input,
+    .nombre-pagina {
+        color: darken(v.$grisClaro, 20%);
+    }
+
+    .formulario .campo input {
+        background-color: lighten( $grisOscuro, 15%);
+        color: v.$blanco;
+
+        &::placeholder {
+            color: darken(v.$grisClaro, 30%);
+        }
+    }
+
+    .alerta.error {
+        background-color: v.$blanco;
+    }
+
+    .formulario .campo input::placeholder {
+        color: darken(v.$grisClaro, 15%);
+    }
+
+    .sidebar {
+        @include m.tablet {
+            background-color: darken($grisOscuro, 5%);
+        }
+    }
+
+    .barra-mobile,
+    .barra {
+        background-color: darken($grisOscuro, 7%);
+    }
+
+    .barra p {
+        color: v.$grisClaro;
+
+        span {
+            color: lighten(v.$indigo, 15%);
+        }
+    }
+
+    .dashboard {
+        background-color: $grisOscuro;
+
+        .formulario input:not([type=submit]) {
+            color: v.$blanco;
+            background-color: lighten($grisOscuro, 20%);
+
+            &::placeholder {
+                color: darken(v.$grisClaro, 30%);
+            }
+        }
+    }
+
+    .filtros {
+        background-color: lighten($grisOscuro, 10%);
+
+        h2, label {
+            color: v.$blanco;
+        }
+
+        input[type="radio"] {
+            accent-color: v.$indigo;
+        }
+    }
+
+    .listado-proyectos .proyecto {
+        background-color: lighten($grisOscuro, 20%);
+
+        &:hover {
+            background-color: lighten($grisOscuro, 10%);
+        }
+    }
+
+    .contenedor-nueva-tarea .agregar-tarea {
+        background-color: v.$indigo;
+
+        &:hover {
+            background-color: lighten(v.$indigo, 7%);
+        }
+    }
+
+    .listado-tareas .tarea {
+        background-color: lighten($grisOscuro, 10%);
+        border: none;
+
+        p {
+            color: v.$grisClaro;
+        }
+    }
+
+    .listado-tareas .no-tareas {
+        color: v.$grisClaro;
+    }
+
+    .modal .formulario {
+        background-color: lighten($grisOscuro, 10%);
+
+        input[type="text"] {
+            background-color: lighten($grisOscuro, 10%);
+            border: 1px solid v.$grisClaro;
+            color: v.$grisClaro;
+        }
+
+        legend {
+            color: v.$grisClaro;
+        }
+    }
+}

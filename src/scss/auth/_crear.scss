@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.crear {
+    margin-top: 3rem;
+    .taskflow {
+        @include m.textoDegradado(v.$naranja)
+    }
+
+    input[type="submit"] {
+        @include m.boton(v.$naranja, v.$blanco);
+    }
+
+    .acciones {
+        a {
+            color: v.$naranja;
+        }
+    }
+}
