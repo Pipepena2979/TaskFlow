@@ -31,8 +31,8 @@ class Router
 
 
         if ( $fn ) {
-            // Call user fn va a llamar una función cuando no sabemos cual sera
-            call_user_func($fn, $this); // This es para pasar argumentos
+            //** CALL USER FN VA A LLAMAR UNA FUNCION CUANDO NO SABEMOS CUAL SERÁ */
+            call_user_func($fn, $this); //** THIS SIRVE PARA PASAR PARAMETROS/ARGUMENTOS DINÁMICOS A LA FUNCIÓN */
         } else {
             echo "Página No Encontrada o Ruta no válida";
         }
@@ -41,16 +41,16 @@ class Router
     public function render($view, $datos = [])
     {
 
-        // Leer lo que le pasamos  a la vista
+        //** LEER LO QUE PASAMOS AL RENDER */
         foreach ($datos as $key => $value) {
-            $$key = $value;  // Doble signo de dolar significa: variable variable, básicamente nuestra variable sigue siendo la original, pero al asignarla a otra no la reescribe, mantiene su valor, de esta forma el nombre de la variable se asigna dinamicamente
+            $$key = $value;
         }
 
-        ob_start(); // Almacenamiento en memoria durante un momento...
+        ob_start(); //** ALMACENAMIENTO EN MEMORIA DURANTE UN MOMENTO */
 
-        // entonces incluimos la vista en el layout
+        //** INCLURIR LA VISTA EN EL LAYOUT */
         include_once __DIR__ . "/views/$view.php";
-        $contenido = ob_get_clean(); // Limpia el Buffer
+        $contenido = ob_get_clean(); //** LIMPIAR LA MEMORIA/BUFFER */
         include_once __DIR__ . '/views/layout.php';
     }
 }

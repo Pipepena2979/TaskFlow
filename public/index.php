@@ -9,6 +9,8 @@ use Controllers\TareaController;
 
 $router = new Router();
 
+//** RUTAS DEL SISTEMA */
+
 //** LOGIN */
 $router->get('/', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);

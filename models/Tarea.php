@@ -4,11 +4,13 @@ namespace Model;
 
 class Tarea extends ActiveRecord {
 
+    //** PROPIEDADES DEL MODELO/CLASE */
     public $id;
     public $nombre;
     public $estado;
     public $proyectoId;
     
+    //** NOMBRE DE LA TABLA Y CAMPOS DE LA BASE DE DATOS */
     protected static $tabla = 'tareas';
     protected static $columnasDB = ['id','nombre', 'estado', 'proyectoId'];
 

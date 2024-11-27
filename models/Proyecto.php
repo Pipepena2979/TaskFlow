@@ -6,11 +6,13 @@ use Model\ActiveRecord;
 
 class Proyecto extends ActiveRecord {
 
+    //** PROPIEDADES DEL MODELO/CLASE */
     public $id;
     public $proyecto;
     public $url;
     public $propietarioId;
 
+    //** NOMBRE DE LA TABLA Y CAMPOS DE LA BASE DE DATOS */
     protected static $tabla = 'proyectos';
     protected static $columnasDB = ['id', 'proyecto', 'url', 'propietarioId'];
 

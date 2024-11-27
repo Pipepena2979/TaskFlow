@@ -1,8 +1,8 @@
 {
-  "name": "uptask-php-mvc-sass",
+  "name": "taskflow_mvc",
   "version": "1.0.0",
-  "description": "UpTask - Curso Desarrollo web Completo",
-  "author": "Juan De la torre @codigoconjuan",
+  "description": "TaskFlow es una innovadora aplicación de administración de proyectos diseñada para ayudarte a organizar, planificar y ejecutar tareas de manera eficiente.",
+  "author": "Andres Felipe Peña @calamjr.3619@gmail.com",
   "main": "index.js",
   "type": "module",
   "scripts": {

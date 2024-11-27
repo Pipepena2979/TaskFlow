@@ -4,6 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord {
 
+    //** PROPIEDADES DEL MODELO/CLASE */
     public $id;
     public $nombre;
     public $email;
@@ -14,6 +15,7 @@ class Usuario extends ActiveRecord {
     public $token;
     public $confirmado;
     
+    //** NOMBRE DE LA TABLA Y CAMPOS DE LA BASE DE DATOS */
     protected static $tabla = 'usuarios';
     protected static $columnasDB = ['id', 'nombre', 'email', 'password', 'token', 'confirmado'];
 

@@ -19,7 +19,6 @@ if(CerrarMenuBtn) {
 }
 
 //** SE ELIMINA LA CLASE DE MOSTRAR EN M.TABLET, M.DESKTOP Y MAYORES */
-
 const anchoPantalla = document.body.clientWidth;
 
 window.addEventListener('resize', function() {
