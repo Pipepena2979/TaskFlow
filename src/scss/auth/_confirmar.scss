@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.confirmar {
+    margin-top: 3rem;
+    .taskflow {
+        @include m.textoDegradado(v.$grisOscuro)
+    }
+
+    .acciones {
+        justify-content: center;
+        a {
+            color: v.$grisOscuro;
+        }
+    }
+}

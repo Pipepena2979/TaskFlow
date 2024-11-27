@@ -1,0 +1,16 @@
+{
+    "name": "andresfelipepena/taskflow_mvc",
+    "description": "TaskFlow es una innovadora aplicación de administración de proyectos diseñada para ayudarte a organizar, planificar y ejecutar tareas de manera eficiente.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

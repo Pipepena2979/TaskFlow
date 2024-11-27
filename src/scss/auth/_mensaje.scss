@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mensaje {
+    margin-top: 3rem;
+    .taskflow {
+        @include m.textoDegradado(v.$azul)
+    }
+}
